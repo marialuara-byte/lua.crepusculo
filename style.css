@@ -1,0 +1,214 @@
+/* Paleta de Cores: Vermelho Sangue e Azul Royal */
+:root {
+    --blood-red: #8B0000; /* Vermelho Escuro/Sangue */
+    --royal-blue: #4169E1; /* Azul Royal */
+    --dark-bg: #111;
+    --light-text: #F0F0F0;
+    --apple-red: #CC0000; /* Vermelho da Maçã */
+}
+
+
+body {
+    font-family: 'Crimson Text', serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: var(--blood-red);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    border-bottom: 5px solid var(--royal-blue);
+}
+
+
+/* Logo e Efeito de Sangue */
+.logo-container {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+}
+
+
+.logo-text {
+    font-size: 3em;
+    color: var(--light-text);
+    text-shadow: 2px 2px 5px #000;
+}
+
+
+.logo-apple {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+
+/* Efeito de Sangue Derramando */
+.blood-effect {
+    position: absolute;
+    bottom: -10px; /* Desce um pouco abaixo do header */
+    left: 0;
+    width: 100%;
+    height: 30px;
+    /* Criando a forma de "sangue derramando" com um gradiente e borda */
+    background: var(--blood-red);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    /* Curva que simula o gotejamento */
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    z-index: 5;
+}
+
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #222;
+    border: 1px solid var(--royal-blue);
+    box-shadow: 0 0 15px var(--royal-blue);
+}
+
+
+h1, h2, h3 {
+    color: var(--blood-red);
+    text-shadow: 1px 1px 3px #000;
+}
+
+
+/* Informações dos Personagens */
+.character-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.character-card {
+    background-color: #333;
+    padding: 15px;
+    border: 2px solid var(--light-text);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--blood-red);
+}
+
+
+/* Curiosidades */
+.curiosities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.curiosities li {
+    margin-bottom: 10px;
+    border-left: 3px solid var(--royal-blue);
+    padding-left: 10px;
+}
+
+
+/* Quiz */
+.quiz-section {
+    text-align: center;
+}
+
+
+#quiz-container {
+    background-color: #444;
+    padding: 20px;
+    border: 3px dashed var(--blood-red);
+}
+
+
+#start-quiz {
+    padding: 10px 20px;
+    background-color: var(--royal-blue);
+    color: var(--light-text);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+
+#start-quiz:hover {
+    background-color: #5a7bdc;
+}
+
+
+.question-card {
+    margin-top: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #555;
+    text-align: left;
+}
+
+
+.option-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #666;
+    color: var(--light-text);
+    border: 1px solid #777;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+
+.option-button:hover {
+    background-color: #777;
+    border-color: var(--royal-blue);
+}
+
+
+.correct {
+    background-color: #008000 !important; /* Verde para correto */
+}
+
+
+.incorrect {
+    background-color: var(--blood-red) !important; /* Vermelho para incorreto */
+}
+
+
+/* Foto e Footer */
+.photo-section {
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    font-style: italic;
+    color: var(--royal-blue);
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--blood-red);
+    border-top: 2px solid var(--royal-blue);
+    margin-top: 20px;
+}
