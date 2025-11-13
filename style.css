@@ -47,11 +47,10 @@ header {
 /* Efeito de Sangue Derramando */
 .blood-effect {
     position: absolute;
-    bottom: -10px; /* Desce um pouco abaixo do header */
+    bottom: -10px; 
     left: 0;
     width: 100%;
     height: 30px;
-    /* Criando a forma de "sangue derramando" com um gradiente e borda */
     background: var(--blood-red);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     /* Curva que simula o gotejamento */
@@ -88,7 +87,7 @@ h1, h2, h3 {
 
 .character-card {
     background-color: #333;
-    padding: 15px 10px; /* Ajuste no padding */
+    padding: 15px 10px; 
     border: 2px solid var(--light-text);
     width: 200px; /* Largura definida para caber 4 por linha em telas grandes */
     text-align: center;
@@ -100,27 +99,26 @@ h1, h2, h3 {
     box-shadow: 0 0 20px var(--blood-red);
 }
 
-/* --- Estilos para as Imagens dos Personagens (Adição para Fotos) --- */
+/* --- Estilos para as Imagens dos Personagens (FINAL) --- */
 
 .character-card img {
     /* Define o tamanho da imagem */
     width: 100%;
-    max-width: 160px; /* Tamanho máximo para caber no card */
+    max-width: 100%; /* Ocupa a largura total disponível dentro do padding do card */
     height: auto;
 
     /* Centraliza e adiciona margem */
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 10px auto; /* Mantém a margem de 10px entre a foto e o nome do personagem */
 
-    /* Estilo de Imagem Redonda (Círculo) */
-    border-radius: 50%; 
+    /* Garante que a imagem seja retangular, com leve arredondamento nas bordas */
+    border-radius: 5px; 
     
     /* Adiciona a borda temática em Vermelho Sangue */
     border: 3px solid var(--blood-red); 
     
-    /* Garante que a imagem preencha o círculo sem distorção */
+    /* Garante que a imagem preencha o espaço */
     object-fit: cover; 
-    aspect-ratio: 1 / 1; 
 }
 
 
