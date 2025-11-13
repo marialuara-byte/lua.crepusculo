@@ -7,7 +7,6 @@
     --apple-red: #CC0000; /* Vermelho da Maçã */
 }
 
-
 body {
     font-family: 'Crimson Text', serif;
     background-color: var(--dark-bg);
@@ -17,7 +16,6 @@ body {
     line-height: 1.6;
 }
 
-
 header {
     background-color: var(--blood-red);
     padding: 20px 0;
@@ -26,7 +24,6 @@ header {
     border-bottom: 5px solid var(--royal-blue);
 }
 
-
 /* Logo e Efeito de Sangue */
 .logo-container {
     position: relative;
@@ -34,13 +31,11 @@ header {
     z-index: 10;
 }
 
-
 .logo-text {
     font-size: 3em;
     color: var(--light-text);
     text-shadow: 2px 2px 5px #000;
 }
-
 
 .logo-apple {
     width: 60px;
@@ -48,7 +43,6 @@ header {
     vertical-align: middle;
     margin-left: 10px;
 }
-
 
 /* Efeito de Sangue Derramando */
 .blood-effect {
@@ -61,17 +55,15 @@ header {
     background: var(--blood-red);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     /* Curva que simula o gotejamento */
-    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%; 
     z-index: 5;
 }
-
 
 main {
     padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
 }
-
 
 section {
     margin-bottom: 40px;
@@ -81,35 +73,54 @@ section {
     box-shadow: 0 0 15px var(--royal-blue);
 }
 
-
 h1, h2, h3 {
     color: var(--blood-red);
     text-shadow: 1px 1px 3px #000;
 }
 
-
 /* Informações dos Personagens */
 .character-card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; /* Espaçamento entre os cards */
     justify-content: center;
 }
 
-
 .character-card {
     background-color: #333;
-    padding: 15px;
+    padding: 15px 10px; /* Ajuste no padding */
     border: 2px solid var(--light-text);
-    width: 200px;
+    width: 200px; /* Largura definida para caber 4 por linha em telas grandes */
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-
 .character-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 20px var(--blood-red);
+}
+
+/* --- Estilos para as Imagens dos Personagens (Adição para Fotos) --- */
+
+.character-card img {
+    /* Define o tamanho da imagem */
+    width: 100%;
+    max-width: 160px; /* Tamanho máximo para caber no card */
+    height: auto;
+
+    /* Centraliza e adiciona margem */
+    display: block;
+    margin: 0 auto 10px auto;
+
+    /* Estilo de Imagem Redonda (Círculo) */
+    border-radius: 50%; 
+    
+    /* Adiciona a borda temática em Vermelho Sangue */
+    border: 3px solid var(--blood-red); 
+    
+    /* Garante que a imagem preencha o círculo sem distorção */
+    object-fit: cover; 
+    aspect-ratio: 1 / 1; 
 }
 
 
@@ -119,26 +130,22 @@ h1, h2, h3 {
     padding: 0;
 }
 
-
 .curiosities li {
     margin-bottom: 10px;
     border-left: 3px solid var(--royal-blue);
     padding-left: 10px;
 }
 
-
 /* Quiz */
 .quiz-section {
     text-align: center;
 }
-
 
 #quiz-container {
     background-color: #444;
     padding: 20px;
     border: 3px dashed var(--blood-red);
 }
-
 
 #start-quiz {
     padding: 10px 20px;
@@ -150,11 +157,9 @@ h1, h2, h3 {
     transition: background-color 0.3s;
 }
 
-
 #start-quiz:hover {
     background-color: #5a7bdc;
 }
-
 
 .question-card {
     margin-top: 20px;
@@ -162,7 +167,6 @@ h1, h2, h3 {
     border-bottom: 1px solid #555;
     text-align: left;
 }
-
 
 .option-button {
     display: block;
@@ -177,22 +181,18 @@ h1, h2, h3 {
     transition: background-color 0.2s, border-color 0.2s;
 }
 
-
 .option-button:hover {
     background-color: #777;
     border-color: var(--royal-blue);
 }
 
-
 .correct {
     background-color: #008000 !important; /* Verde para correto */
 }
 
-
 .incorrect {
     background-color: var(--blood-red) !important; /* Vermelho para incorreto */
 }
-
 
 /* Foto e Footer */
 .photo-section {
@@ -203,7 +203,6 @@ h1, h2, h3 {
     font-style: italic;
     color: var(--royal-blue);
 }
-
 
 footer {
     text-align: center;
